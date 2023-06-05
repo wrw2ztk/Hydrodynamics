@@ -2,14 +2,14 @@ CXX = clang
 
 CXXFLAGS = -Wall -g
 
-OBJECTS = practiceGSL.o
+OBJECTS = integrationPractice.o
 
 LIBS = -lgsl -lgslcblas -lm
 
 gslmake: $(OBJECTS)
 	$(CXX) -o practiceGSL $(CXXFLAGS) $(OBJECTS) $(LIBS)
 
-practiceGSL.o: practiceGSL.c
+integrationPractice.o: integrationPractice.c
 
 clean:
 	-rm -f *.o *~ a.out
