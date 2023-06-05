@@ -45,11 +45,11 @@ int main (){
     //size limit, workspace, result place, and error estimation place
     
     //Loop across space
-    for(double r = 0.0; r < 10.0; r += 0.05){
-        rCommaT[0] = r;
+    for(double t = 0; t < 40.0; t += 0.05){
+        rCommaT[1] = t;
         double value = gsl_integration_qagiu(&F, 0, 0, 1e-4, 
                                 1000, w, &result, &error);
-        fprintf(output, "%lf %lf\n", r, result);
+        fprintf(output, "%lf %lf\n", t, result);
         printf("%lf\n", error);
     }
 
