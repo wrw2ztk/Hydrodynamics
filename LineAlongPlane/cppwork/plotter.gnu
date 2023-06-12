@@ -8,9 +8,9 @@ set key font ",30"
 set lmargin 15
 set bmargin 7
 set tics font ", 15"
-set xlabel 'x' font ",30" offset 0,-1.0,0
-set ylabel 'Overdensity' font ",30" offset -3.0,0,0
+set xlabel 't' font ",30" offset 0,-1.0,0
+set ylabel 'Net Charge x > 0' font ",30" offset -3.0,0,0
 
 
-plot "lineAlongPlane_t50.txt" with lines title "t = 50"
+plot "netChargeEvolution.txt" with lines title ""
 set out

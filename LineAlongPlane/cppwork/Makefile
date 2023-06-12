@@ -1,15 +1,15 @@
 CXX = clang
 
-CXXFLAGS = -Wall -g
+CXXFLAGS = -Wall -O
 
-OBJECTS = evolutionProgression.o
+OBJECTS = chargeDistribution.o
 
 LIBS = -lgsl -lgslcblas -lm
 
 gslmake: $(OBJECTS)
-	$(CXX) -o evolutionProgression $(CXXFLAGS) $(OBJECTS) $(LIBS)
+	$(CXX) -o chargeDistribution $(CXXFLAGS) $(OBJECTS) $(LIBS)
 
-evolutionProgression.o: evolutionProgression.c
+evolutionProgression.o: chargeDistribution.c
 
 clean:
 	-rm -f *.o *~ a.out
